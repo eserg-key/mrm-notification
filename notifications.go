@@ -1,9 +1,9 @@
 package mrm_notification
 
 import (
+	"github.com/nats-io/nats.go"
 	"log"
-
-	"notifications_lib/model"
+	"mrm_notification/model"
 )
 
 const (

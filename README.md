@@ -1,11 +1,11 @@
-## Notifications Lib
+## MRM Notifications package
 
-Библиотека для отправки уведомлений из сервисов mrm в nats. <br/>
+Пакет для отправки уведомлений из сервисов mrm в nats. <br/>
 
 ### Установка
 
 ```sh
-    go get https://gitlab.com/etagi/mrm/notifications_lib
+    go get github.com/eserg-key/mrm-notification
 ```
 
 ### Примеры
@@ -15,7 +15,7 @@
         nc := notifications_lib.NewNotificationClient("nats://127.0.0.1:4222")
         defer nc.Close()   
     ```
-- Инициализация проекта
+- Зарегистрировать сервис для уведомлений
     ```go
         nc := notifications_lib.NewNotificationClient("nats://127.0.0.1:4222")
   

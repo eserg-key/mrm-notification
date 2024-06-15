@@ -1,4 +1,4 @@
-module notifications_lib
+module mrm_notification
 
 go 1.22.0
 
