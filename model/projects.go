@@ -1,10 +1,10 @@
 package model
 
 type Project struct {
-	Name     string `json:"name"`
-	Code     string `json:"code"`
-	Disabled bool   `json:"disabled"`
-	Types    []Type `json:"types"`
+	Name     string `json:"name"`     // Название проекта
+	Code     string `json:"code"`     // Код проекта
+	Disabled bool   `json:"disabled"` // Статус работы проекта true|false
+	Types    []Type `json:"types"`    // Типы уведомлений
 }
 
 func NewProject(name string, code string, disabled bool, types []Type) Project {
@@ -12,10 +12,10 @@ func NewProject(name string, code string, disabled bool, types []Type) Project {
 }
 
 type Type struct {
-	Name       string `json:"name"`
-	Code       string `json:"code"`
-	Switchable bool   `json:"switchable"`
-	Disabled   bool   `json:"disabled"`
+	Name       string `json:"name"`       // Название уведомления
+	Code       string `json:"code"`       // Код уведомлений
+	Switchable bool   `json:"switchable"` // Переключатель в профиле true - отображается в настройках
+	Disabled   bool   `json:"disabled"`   //  Статус работы уведомления true|false
 }
 
 func NewType(name string, code string, switchable bool, disabled bool) Type {
