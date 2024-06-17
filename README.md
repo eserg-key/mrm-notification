@@ -46,8 +46,8 @@
         actionCreate := model.NewNotificationsAction("Create", "primary", "#")
         actionDelete := model.NewNotificationsAction("Delete", "secondary", "#")
         var actions []model.NotificationsAction
-        actions = append(actions, *actionCreate)
-        actions = append(actions, *actionDelete)
+        actions = append(actions, actionCreate)
+        actions = append(actions, actionDelete)
 
         notifications := model.NewNotificationsInput("content", "remove_collection", []string{"111"}, "test lib", "test lib from other service", time.Now(), actions)
 

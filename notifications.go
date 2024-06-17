@@ -13,8 +13,8 @@ const (
 
 type ClientInterface interface {
 	Close()
-	ProjectPublish(project *model.Project) error
-	NotificationPublish(notifications *model.NotificationsInput) error
+	ProjectPublish(project model.Project) error
+	NotificationPublish(notifications model.NotificationsInput) error
 }
 
 type Client struct {
@@ -58,10 +58,10 @@ func (n *Client) Close() {
 	n.encodedConn.Close()
 }
 
-func (n *Client) ProjectPublish(project *model.Project) error {
+func (n *Client) ProjectPublish(project model.Project) error {
 	return n.encodedConn.Publish(n.topicProject, project)
 }
 
-func (n *Client) NotificationPublish(notifications *model.NotificationsInput) error {
+func (n *Client) NotificationPublish(notifications model.NotificationsInput) error {
 	return n.encodedConn.Publish(n.topicNotification, notifications)
 }

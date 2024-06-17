@@ -7,8 +7,8 @@ type Project struct {
 	Types    []Type `json:"types"`
 }
 
-func NewProject(name string, code string, disabled bool, types []Type) *Project {
-	return &Project{Name: name, Code: code, Disabled: disabled, Types: types}
+func NewProject(name string, code string, disabled bool, types []Type) Project {
+	return Project{Name: name, Code: code, Disabled: disabled, Types: types}
 }
 
 type Type struct {
@@ -18,6 +18,6 @@ type Type struct {
 	Disabled   bool   `json:"disabled"`
 }
 
-func NewType(name string, code string, switchable bool, disabled bool) *Type {
-	return &Type{Name: name, Code: code, Switchable: switchable, Disabled: disabled}
+func NewType(name string, code string, switchable bool, disabled bool) Type {
+	return Type{Name: name, Code: code, Switchable: switchable, Disabled: disabled}
 }

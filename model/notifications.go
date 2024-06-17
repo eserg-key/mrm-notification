@@ -15,7 +15,7 @@ func NewNotificationsInput(
 	message string,
 	created time.Time,
 	actions []NotificationsAction,
-) *NotificationsInput {
+) NotificationsInput {
 	system := System{
 		ProjectCode: projectCode,
 		TypeCode:    typeCode,
@@ -29,7 +29,7 @@ func NewNotificationsInput(
 		Actions: actions,
 	}
 
-	return &NotificationsInput{System: system, Notifications: notifications}
+	return NotificationsInput{System: system, Notifications: notifications}
 }
 
 type System struct {
@@ -51,6 +51,6 @@ type NotificationsAction struct {
 	Link  string `json:"link"`
 }
 
-func NewNotificationsAction(name string, color string, link string) *NotificationsAction {
-	return &NotificationsAction{Name: name, Color: color, Link: link}
+func NewNotificationsAction(name string, color string, link string) NotificationsAction {
+	return NotificationsAction{Name: name, Color: color, Link: link}
 }
