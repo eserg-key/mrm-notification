@@ -1,4 +1,4 @@
-module mrm_notification
+module github.com/eserg-key/mrm-notification
 
 go 1.22.0
 

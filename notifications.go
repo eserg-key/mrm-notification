@@ -1,9 +1,9 @@
 package mrm_notification
 
 import (
+	"github.com/eserg-key/mrm-notification/model"
 	"github.com/nats-io/nats.go"
 	"log"
-	"mrm_notification/model"
 )
 
 const (
