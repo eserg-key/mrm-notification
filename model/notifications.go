@@ -15,6 +15,7 @@ func NewNotificationsInput(
 	message string,
 	created time.Time,
 	actions []NotificationsAction,
+	image string,
 ) NotificationsInput {
 	system := System{
 		ProjectCode: projectCode,
@@ -27,6 +28,7 @@ func NewNotificationsInput(
 		Message: message,
 		Created: created,
 		Actions: actions,
+		Image:   image,
 	}
 
 	return NotificationsInput{System: system, Notifications: notifications}
@@ -43,6 +45,7 @@ type Notifications struct {
 	Message string                `json:"message"` // Текст сообщения
 	Created time.Time             `json:"created"` // Дата
 	Actions []NotificationsAction `json:"actions"` // Кнопки
+	Image   string                `json:"image"`   // Иконка пользователя
 }
 
 type NotificationsAction struct {
